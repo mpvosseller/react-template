@@ -1,6 +1,7 @@
 import React from 'react'
+import Button from 'react-bootstrap/Button'
 import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
-import './App.css'
+import './App.scss'
 import { Counter } from './features/counter/Counter'
 import logo from './logo.svg'
 
@@ -87,6 +88,7 @@ function Home(): JSX.Element {
             React Redux
           </a>
         </span>
+        <Button variant="success">Success Button</Button>
       </header>
     </div>
   )
