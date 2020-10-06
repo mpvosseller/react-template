@@ -1,15 +1,10 @@
-import React from 'react';
-import logo from './logo.svg';
-import { Counter } from './features/counter/Counter';
-import './App.css';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Link
-} from "react-router-dom";
+import React from 'react'
+import { BrowserRouter as Router, Link, Route, Switch } from 'react-router-dom'
+import './App.css'
+import { Counter } from './features/counter/Counter'
+import logo from './logo.svg'
 
-function App() {
+function App(): JSX.Element {
   return (
     <Router>
       <div>
@@ -42,10 +37,10 @@ function App() {
         </Switch>
       </div>
     </Router>
-  );
+  )
 }
 
-function Home() {
+function Home(): JSX.Element {
   return (
     <div className="App">
       <header className="App-header">
@@ -94,16 +89,15 @@ function Home() {
         </span>
       </header>
     </div>
-  );
+  )
 }
 
-function About() {
-  return <h2>About</h2>;
+function About(): JSX.Element {
+  return <h2>About</h2>
 }
 
-function Users() {
-  return <h2>Users</h2>;
+function Users(): JSX.Element {
+  return <h2>Users</h2>
 }
 
-
-export default App;
+export default App
