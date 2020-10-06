@@ -1,3 +1,62 @@
+How to create and configure a React app that uses TypeScript, Redux, React Router, Bootstrap, Saas, ESLint, Prettier, and VSCode.
+
+This repo contains instructions on creating a React app configured with:
+
+- [TypeScript](https://www.typescriptlang.org) (Programming language)
+- [React](https://reactjs.org) (User interface library)
+- [Create React App / React Scripts](https://github.com/facebook/create-react-app) (Initial template creation + build and run scripts)
+- [Redux](https://redux.js.org) (State management)
+- [React Router](https://reactrouter.com) (URL routing)
+- [Bootstrap](https://getbootstrap.com) / [React Bootstrap](https://react-bootstrap.github.io) (CSS framework)
+- [Node-sass](https://github.com/sass/node-sass) (CSS preprocessor)
+- [ESLint](https://eslint.org) (Linting)
+- [Prettier](https://prettier.io) (Code formatting)
+- [Visual Studio Code](https://code.visualstudio.com) (IDE)
+
+## Instructions:
+
+1. Create initial template
+
+   1. `npx create-react-app my-app --template redux-typescript`
+
+1. React Router
+
+   1. `yarn add react-router-dom @types/react-router-dom`
+   1. Update [`App.tsx`](src/App.tsx#L10) to use a [Router](https://reactrouter.com/web/guides/quick-start)
+
+1. Configure ESLint, Prettier, TypeScript, and VS Code
+
+   1. `yarn add prettier eslint-config-prettier eslint-plugin-prettier`
+   1. Add [`.eslintrc.js`](.eslintrc.js)
+   1. Add [`.prettierrc.js`](.prettierrc.js)
+   1. Add [`.vscode/settings.json`](.vscode/settings.json)
+   1. Add lint scripts to [`package.json`](package.json#L30-L31)
+
+1. Lint and format
+
+   1. Open each source file in VS Code and save
+   1. `yarn lint`
+   1. Fix any lint warnings or errors
+
+1. Bootstrap and Node-sass
+
+   1. `yarn add bootstrap react-bootstrap node-sass`
+   1. Rename all`.css` files to `.scss`
+   1. Add [`bootstrap-custom.scss`](bootstrap-custom.scss)
+   1. In [`App.scss`](src/App.scss#L1) add `@import "bootstrap-custom";`
+   1. Update each file that imports a `.css` file to import the new `.scss` file
+   1. We can now use Bootstrap components like this:
+
+      ```js
+      import Button from 'react-bootstrap/Button'
+
+      function MyButton() {
+        return <Button variant="success">Success Button</Button>
+      }
+      ```
+
+# Original Readme
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app), using the [Redux](https://redux.js.org/) and [Redux Toolkit](https://redux-toolkit.js.org/) template.
 
 ## Available Scripts
